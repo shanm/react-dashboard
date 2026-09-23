@@ -1,0 +1,108 @@
+:root {
+  font-family: Inter, "Segoe UI", sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  color: #1f2937;
+  background: #f3f6fb;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  --page-background: #eef4ff;
+  --panel-background: #ffffff;
+  --panel-soft: #f8faff;
+  --primary: #2563eb;
+  --primary-dark: #1d4ed8;
+  --primary-soft: rgba(37, 99, 235, 0.12);
+  --accent: #7c3aed;
+  --text: #1f2937;
+  --text-muted: #5b6475;
+  --border: #dfe7f5;
+  --success: #16a34a;
+  --danger: #dc2626;
+  --shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+}
+
+body[data-theme="dark"] {
+  --page-background: #0b1220;
+  --panel-background: #111827;
+  --panel-soft: #0f172a;
+  --primary: #60a5fa;
+  --primary-dark: #bfdbfe;
+  --primary-soft: rgba(96, 165, 250, 0.2);
+  --accent: #a78bfa;
+  --text: #e5eefb;
+  --text-muted: #a6b1c1;
+  --border: rgba(148, 163, 184, 0.18);
+  --shadow: 0 20px 50px rgba(2, 6, 23, 0.55);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  background: var(--page-background);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background:
+    radial-gradient(circle at top left, rgba(96, 165, 250, 0.22), transparent 24%),
+    linear-gradient(180deg, var(--page-background) 0%, #edf4ff 100%);
+  color: var(--text);
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+body[data-theme="dark"] {
+  background:
+    radial-gradient(circle at top left, rgba(96, 165, 250, 0.12), transparent 18%),
+    linear-gradient(180deg, #081120 0%, #0f172a 100%);
+}
+
+button,
+input {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.page-content {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 32px 24px 56px;
+}
+
+.status-panel,
+.welcome-panel,
+.empty-state,
+.report-panel,
+.user-card,
+.login-card,
+.reset-card {
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  box-shadow: var(--shadow);
+}
+
+@media (max-width: 640px) {
+  .page-content {
+    padding: 20px 16px 36px;
+  }
+}
