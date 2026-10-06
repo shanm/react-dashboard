@@ -4,6 +4,7 @@ export const STORAGE_KEYS = {
     EXPIRES_AT: "token_expires_at",
     USER: "auth_user",
     ROLES: "auth_roles",
+    SESSION_ID: "session_id",
 } as const;
 
 export const AUTH_STORAGE = {
@@ -12,4 +13,5 @@ export const AUTH_STORAGE = {
     EXPIRES_AT: STORAGE_KEYS.EXPIRES_AT,
     USER: STORAGE_KEYS.USER,
     ROLES: STORAGE_KEYS.ROLES,
+    SESSION_ID: STORAGE_KEYS.SESSION_ID,
 } as const;
