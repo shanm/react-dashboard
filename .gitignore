@@ -26,3 +26,18 @@ dist-ssr
 .env
 .env.*
 !.env.example\n\n# Environment files\n.env\n.env.*\n!.env.example\n
+
+# Terraform generated files
+**/.terraform/*
+*.tfstate
+*.tfstate.*
+*.tfstate.backup
+crash.log
+crash.*.log
+
+# Terraform variable files that may contain secrets
+*.tfvars
+*.tfvars.json
+
+# Keep reusable Terraform dependency lock files
+!**/.terraform.lock.hcl
